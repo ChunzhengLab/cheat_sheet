@@ -1,4 +1,4 @@
-# Geant4 Installation Guide in WSL(Ubuntu)
+# Geant4 Installation Guide on WSL1(Ubuntu)
 
 Conrad Wang
 
