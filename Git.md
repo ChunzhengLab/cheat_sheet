@@ -8,14 +8,9 @@ git add [file1] [file2] ...
 git add .
 git add [dir]
 
-
-
-
-
 git init
 git log
 git status
 git reflog
 git commit -m "描述"
 ```
-
