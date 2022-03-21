@@ -58,8 +58,3 @@ inputDir_2->GetObject("hist_2", histRead_2);
 
 histRead_1->Draw();
 ```
-
-```C++
-
-```
-
