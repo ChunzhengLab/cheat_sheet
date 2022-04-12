@@ -1,6 +1,6 @@
 ```bash
-git config --global user.name "Conrad Wang"
-git config --global user.email "phys.cz.wang@outlook.com"
+git config --global user.name "user's name"
+git config --global user.email "user's email"
 git config --list
 
 

@@ -69,3 +69,10 @@ find / -type f -size 0 -exec ls -l {} \;
 lscpu
 ```
 
+```bash
+#Linux wc命令用于计算字数。
+wc -l filename #查看文件里有多少行。
+wc -w filename #查看文件里有多少个字。
+wc -L filename #查看文件里最长的那一行有多少个字。
+```
+
