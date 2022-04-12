@@ -10,6 +10,37 @@ unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
 shuffle(myvector.begin(),myvector.end(),std::default_random_engine(seed));
 ````
 
+```C++
+//遍历文件与文件夹，利用POSIX的dirent功能
+#include <stdio.h>
+#include <dirent.h>
+int main(int argc, const char**argv) {
+    struct dirent *entry = nullptr;
+    DIR *dp = nullptr;
+
+    dp = opendir(argc > 1 ? argv[1] : "/");
+    if (dp != nullptr) {
+        while ((entry = readdir(dp)))
+            printf ("%s\n", entry->d_name);
+    }
+
+    closedir(dp);
+    return 0;
+}
+
+//C++17标准库
+#include <filesystem>
+namespace fs = std::filesystem;
+const fs::path pathToShow{ argc >= 2 ? argv[1] : fs::current_path() };
+for (const auto& entry : fs::directory_iterator(pathToShow)) {
+    const auto filenameStr = entry.path().filename().string();
+    //支持判断是文件还是文件夹
+    if (entry.is_directory())         std::cout << "dir:  " << filenameStr << '\n';
+    else if (entry.is_regular_file()) std::cout << "file: " << filenameStr << '\n';
+    else                              std::cout << "??    " << filenameStr << '\n';
+  }
+```
+
 
 
 ```C++
