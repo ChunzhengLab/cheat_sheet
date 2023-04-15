@@ -12,7 +12,7 @@ $$
 
 对于 ```TProfile``` 类，
 
-- 当 error option 设置为 ```""```时，```GetBinError``` 返回**标准偏差，方差项带入总体方差$\sigma^2$**，即 
+- 当 error option 设置为 ```""```时，```GetBinError``` 返回**标准偏差**，**方差项带入总体方差 $\sigma^2$**，即 
 
 $$
 \mathrm{bin\_error(option= s)} = \frac{\sigma}{\sqrt{n}}= \frac{\sqrt{\frac{\sum_{i}{(x_i-\bar{x_i})^2}}{n-1}}}{\sqrt{n}} = \frac{\sqrt{\sum_{i}{(x_i-\bar{x_i})^2}}}{n}
