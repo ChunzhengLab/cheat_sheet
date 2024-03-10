@@ -33,6 +33,7 @@ systemctl status slurmctld
 systemctl start slurmctld
 systemctl restart slurmctld
 systemctl enable slurmctld
+```
 
 ```bash
 #恢复某个节点
