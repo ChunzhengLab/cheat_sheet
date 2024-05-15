@@ -46,3 +46,11 @@ ps aux | grep ssh
 ```
 应该会看到与 ControlPath 配置匹配的连接信息。
 
+### 结束复用
+```bash
+ssh -O exit user@host
+```
+
+
+
+
