@@ -334,7 +334,7 @@ git reflog
 ```
 abc1234 HEAD@{0}: commit: Add new feature
 def5678 HEAD@{1}: rebase finished: returning to refs/heads/main
-ghi9101 HEAD@{2}: checkout: moving from feature/my-feature to main
+ghi9101 HEAD@{2}: checkout: moving from my-feature to main
 ```
 
 #### 2. 使用 reflog 恢复到之前的状态
@@ -402,7 +402,7 @@ git reflog show HEAD@{1}
 
 #### 找回被删除的分支
 
-假设误删除了一个名为 `feature/my-feature` 的分支：
+假设误删除了一个名为 `my-feature` 的分支：
 
 1. **查看 reflog 以找到该分支的最后一个提交：**
 
@@ -410,10 +410,10 @@ git reflog show HEAD@{1}
    git reflog
    ```
 
-   找到 `feature/my-feature` 分支的最后一个提交的哈希值。
+   找到 `my-feature` 分支的最后一个提交的哈希值。
 
 2. **重新创建该分支：**
 
    ```bash
-   git branch feature/my-feature <commit-hash>
+   git branch my-feature <commit-hash>
    ```
