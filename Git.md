@@ -417,3 +417,23 @@ git reflog show HEAD@{1}
    ```bash
    git branch my-feature <commit-hash>
    ```
+
+
+## 在 Git 中只暂存（stash）部分文件的修改
+
+1.	将你想保留的文件的修改添加到暂存区：
+
+```bash
+git add path/to/file_you_want_to_keep
+```
+
+
+2.	使用 --keep-index 参数进行暂存：
+
+```bash
+git stash push --keep-index
+```
+
+注意使用`--keep-index`
+这会暂存未暂存的文件修改（即未使用 git add 的文件），并保留已暂存的文件修改在工作区。
+
